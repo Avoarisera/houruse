@@ -1,0 +1,38 @@
+%nav.navbar.navbar-expand-lg.bg-danger
+  .container
+    %a.navbar-brand{:href => "#"} Navbar
+    %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", :type => "button"}
+      %span.sr-only Toggle navigation
+      %span.navbar-toggler-icon
+      %span.navbar-toggler-icon
+      %span.navbar-toggler-icon
+    #navbarNav.collapse.navbar-collapse
+      %ul.navbar-nav
+        %li.nav-item.active
+          %a.nav-link{:href => "#"}
+            Home
+            %span.sr-only (current)
+        %li.nav-item
+          %a.nav-link{:href => "#"} Features
+        %li.nav-item
+          %a.nav-link{:href => "#"} Pricing
+        %li.nav-item
+          %a.nav-link.disabled{:href => "#"} Disabled
+#carouselExampleIndicators.carousel.slide{"data-ride" => "carousel"}
+  %ol.carousel-indicators
+    %li.active{"data-slide-to" => "0", "data-target" => "#carouselExampleIndicators"}
+    %li{"data-slide-to" => "1", "data-target" => "#carouselExampleIndicators"}
+    %li{"data-slide-to" => "2", "data-target" => "#carouselExampleIndicators"}
+  .carousel-inner
+    .carousel-item.active
+      = image_tag "hotel1.jpg" , class: " d-block w-100", alt: "First slide"
+    .carousel-item
+      = image_tag "hotel2.jpg" , class: " d-block w-100", alt: "Second slide"
+    .carousel-item
+      = image_tag "hotel3.jpg" , class: " d-block w-100", alt: "Third slide"
+  %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselExampleIndicators", :role => "button"}
+    %span.carousel-control-prev-icon{"aria-hidden" => "true"}
+    %span.sr-only Previous
+  %a.carousel-control-next{"data-slide" => "next", :href => "#carouselExampleIndicators", :role => "button"}
+    %span.carousel-control-next-icon{"aria-hidden" => "true"}
+    %span.sr-only Next
